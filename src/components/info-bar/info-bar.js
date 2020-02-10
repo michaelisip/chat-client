@@ -8,14 +8,14 @@ const InfoBar = ({room}) => (
             <img 
                 className="onlineIcon" 
                 src="https://raw.githubusercontent.com/adrianhajdin/project_chat_application/master/client/src/icons/onlineIcon.png" 
-                alt="online icon" />
+                alt="online" />
             <h3> { room } </h3>
         </div>
         <div className="rightInnerContainer">
             <a href="/">
                 <img 
                     src="https://raw.githubusercontent.com/adrianhajdin/project_chat_application/master/client/src/icons/closeIcon.png" 
-                    alt="close image" />
+                    alt="close" />
             </a>
         </div>
     </div>
