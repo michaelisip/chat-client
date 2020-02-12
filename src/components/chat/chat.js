@@ -11,7 +11,7 @@ let socket
 
 const Chat = ({ location }) => {
 
-    const ENDPOINT = 'https://chat-nodejs-server.herokuapp.com'
+    const ENDPOINT = process.env.REACT_APP_API_ENDPOINT
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
     const [message, setMessage] = useState('')
@@ -38,6 +38,9 @@ const Chat = ({ location }) => {
     useEffect(() => {
         socket.on('message', (message) => {
             setMessages([...messages, message])
+        })
+        socket.on('room-data', (data) => {
+            console.log(data)
         })
     }, [messages])
 
