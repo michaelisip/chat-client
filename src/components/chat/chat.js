@@ -54,8 +54,8 @@ const Chat = ({ location }) => {
     }
 
     return (
-        <div className="outerContainer">
-            <div className="innerContainer">
+        <div className="d-flex justify-content-center align-items-center bg-dark chat-bg">
+            <div className="d-flex flex-column justify-content-between rounded bg-white chat-box">
                 <InfoBar room={room}></InfoBar>
                 <Messages messages={messages} name={name}></Messages>
                 <Input message={message} setMessage={setMessage} sendMessage={sendMessage}></Input> 
