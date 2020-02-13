@@ -9,7 +9,7 @@ const InfoBar = ({room}) => (
                 className="onlineIcon" 
                 src="https://raw.githubusercontent.com/adrianhajdin/project_chat_application/master/client/src/icons/onlineIcon.png" 
                 alt="online" />
-            <h3> { room } </h3>
+            <h3> { room.charAt(0).toUpperCase() + room.slice(1) } </h3>
         </div>
         <div className="rightInnerContainer">
             <a href="/">
