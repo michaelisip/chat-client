@@ -12,7 +12,7 @@ let socket
 
 const Chat = ({ location }) => {
 
-    const ENDPOINT = process.env.REACT_APP_API_ENDPOINT
+    const SOCKETIO_ENDPOINT = process.env.REACT_APP_SOCKETIO_ENDPOINT
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
     const [message, setMessage] = useState('')
@@ -21,7 +21,7 @@ const Chat = ({ location }) => {
     useEffect(() => {
         const { name, room } = queryString.parse(location.search)
 
-        socket = io(ENDPOINT)
+        socket = io(SOCKETIO_ENDPOINT)
         setName(name)
         setRoom(room)
 
@@ -34,7 +34,7 @@ const Chat = ({ location }) => {
             socket.off()
         }
 
-    }, [ENDPOINT, location.search])
+    }, [SOCKETIO_ENDPOINT, location.search])
 
     useEffect(() => {
         socket.on('message', (message) => {
