@@ -66,7 +66,7 @@ class Join extends React.Component {
                         <p className="text-center"> 
                             <small> <i>
                                 Developed by 
-                                <a href="https://michaeljohnisip.netlify.com" target="_blank" rel="noopener noreferrer"> Michael John Isip </a> 
+                                <a href="https://michaeljohnisip.netlify.com" target="_blank" rel="noopener noreferrer"> Michael Isip </a> 
                             </i></small>
                         </p>
                     </div>
